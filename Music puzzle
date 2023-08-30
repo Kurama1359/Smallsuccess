@@ -1,0 +1,18 @@
+for i in range(int(input())):
+    t = int(input())
+    s = input()
+    c = []
+    c.append(s[:2])
+    a = 0
+    g = 0
+    for j in s[2:]:
+        a += 1
+        c.append(s[a] + j)
+    for y in range(len(c)):
+        b = 0
+        for x in range(y, len(c)):
+            if c[x] == c[y]:
+                b += 1
+        if b <= 1:
+            g += 1
+    print(g)     
