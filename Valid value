@@ -1,0 +1,9 @@
+n = input().split('-')
+a = [1 for i in n if i.isdigit() == True and  0 < len(i) < 5 and len(n[-1]) == 4 and len(n[-2]) == 3 and len(n[-3]) == 3]
+count = sum(a)
+if count == 4 and n[0] == '7':
+    print('YES')
+elif count == 3 and len(n) == 3:
+    print('YES')
+else:
+    print('NO')
